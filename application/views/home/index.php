@@ -2,7 +2,7 @@
     <div class="container-scroller">
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo mr-5" href="<?= base_url(''); ?>"><img src="<?= base_url('assets/images/'); ?>logo.png" class="mr-2" alt="logo" height="50" width="50"></a>
+                <a class="navbar-brand brand-logo mr-5" href="<?= base_url(''); ?>"><img src="<?= base_url('assets/images/'); ?>logo.png" class="mr-2" alt="logo"></a>
                 <a class="navbar-brand brand-logo-mini" href="<?= base_url(''); ?>"><img src="<?= base_url('assets/images/'); ?>logo.png" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-start">
