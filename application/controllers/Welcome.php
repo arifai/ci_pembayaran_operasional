@@ -8,15 +8,14 @@ class Welcome extends CI_Controller
 		parent::__construct();
 		// $this->load->model('Payment_model', 'payment');
 		$this->load->model('Welcome_model', 'welcome');
-
 	}
 	public function index()
 	{
 		$data['title'] = 'Home';
 		$data['santri'] = $this->welcome->getAll();
-		
-		$this->load->view('partials/_header', $data); 
-		$this->load->view('home/index', $data); 
+
+		$this->load->view('partials/_header', $data);
+		$this->load->view('home/index', $data);
 		$this->load->view('partials/_footer');
 	}
 
@@ -25,9 +24,19 @@ class Welcome extends CI_Controller
 		$data['title'] = 'Detail';
 		$data['detail'] = $this->welcome->getDetail($id);
 		$data['pembayaran'] = $this->welcome->getPayment($id);
-		
+
 		$this->load->view('partials/_header', $data);
-		$this->load->view('home/detail', $data); 
+		$this->load->view('home/detail', $data);
+		$this->load->view('partials/_footer');
+	}
+
+	public function info()
+	{
+		$data['title'] = 'Informasi Kegiatan';
+		$data['info'] = $this->db->get('informasi')->result_array();
+
+		$this->load->view('partials/_header', $data);
+		$this->load->view('home/info', $data);
 		$this->load->view('partials/_footer');
 	}
 }

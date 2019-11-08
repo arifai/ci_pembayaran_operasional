@@ -20,6 +20,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('info'); ?>">
+                <i class="ti-info-alt menu-icon"></i>
+                <span class="menu-title">Tambah Informasi</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="<?= base_url('laporan'); ?>">
                 <i class="ti-file menu-icon"></i>
                 <span class="menu-title">Laporan</span>

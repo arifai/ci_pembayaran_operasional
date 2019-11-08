@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendors/base/vendor.bundle.base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepick/5.1.1/css/jquery.datepick.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <!-- endinject -->
     <!-- plugin css for this page -->
     <!-- End plugin css for this page -->

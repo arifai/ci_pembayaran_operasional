@@ -36,7 +36,7 @@
                                         <?= $this->session->flashdata('message'); ?>
                                     </div>
                                     <div class="table-responsive pt-3">
-                                        <table class="table table-bordered">
+                                        <table class="table table-bordered" id="myTable">
                                             <thead align="center">
                                                 <tr>
                                                     <th>No.</th>

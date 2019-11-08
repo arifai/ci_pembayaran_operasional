@@ -9924,6 +9924,10 @@ pre code {
   }
 }
 
+/* td {
+  word-wrap: break-word;
+} */
+
 .table {
   width: 100%;
   margin-bottom: 1rem;

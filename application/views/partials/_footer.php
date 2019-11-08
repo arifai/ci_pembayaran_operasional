@@ -10,10 +10,16 @@
   <script type="text/javascript" src="<?= base_url('assets/'); ?>js/hoverable-collapse.js"></script>
   <script type="text/javascript" src="<?= base_url('assets/'); ?>js/template.js"></script>
   <script type="text/javascript" src="<?= base_url('assets/'); ?>js/todolist.js"></script>
-  
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datepick/5.1.1/js/jquery.datepick.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
   <!-- endinject -->
   <script type="text/javascript">
+    // datatables
+    $(document).ready(function() {
+      $('#myTable').DataTable();
+    });
+
     $(document).ready(function() { // Ketika halaman selesai di load
       var currentDate = new Date();
       $('.input-tanggal').datepicker({

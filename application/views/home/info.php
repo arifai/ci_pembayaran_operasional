@@ -6,7 +6,7 @@
                 <a class="navbar-brand brand-logo-mini" href="<?= base_url(''); ?>"><img src="<?= base_url('assets/images/'); ?>logo.png" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-start text-center">
-                <h5 class="text-uppercase">Selamat Datang di Website Informasi Pembayaran Syahriah Pondok Pesantren Miftahul Huda <br> Siwatu, Bumiroso, Watumalang, Wonosobo</h5>
+                <h5 class="text-uppercase">Informasi Kegiatan Pondok Pesantren Miftahul Huda</h5>
             </div>
         </nav>
         <div class="container-fluid page-body-wrapper">
@@ -18,28 +18,23 @@
                         <div class="col-md-12 grid-margin stretch-card">
                             <div class="card position-relative">
                                 <div class="card-body">
+                                    <h4 class="card-title">Informasi Kegiatan</h4>
                                     <div class="table-responsive pt-3">
-                                        <table class="table table-bordered" id="myTable">
-                                            <thead align="center">
+                                        <table class="table table-bordered">
+                                            <thead>
                                                 <tr>
                                                     <th>No.</th>
-                                                    <th>Nama</th>
-                                                    <th>Nama Ortu</th>
-                                                    <th>Alamat</th>
-                                                    <th>Kelas</th>
-                                                    <th>#</th>
+                                                    <th>Informasi</th>
+                                                    <th>Tanggal</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <?php $i = 1; ?>
-                                                <?php foreach ($santri as $s) : ?>
+                                                <?php foreach ($info as $s) : ?>
                                                     <tr>
                                                         <td><?= $i; ?></td>
-                                                        <td class="text-uppercase"><?= $s['full_name']; ?></td>
-                                                        <td class="text-uppercase"><?= $s['parents_name']; ?></td>
-                                                        <td class="text-uppercase"><?= $s['address']; ?></td>
-                                                        <td><?= $s['class']; ?></td>
-                                                        <td align="center"><a href="<?= base_url('welcome/detail/') . $s['no_absen'] ?>" class="btn btn-primary btn-sm">Lihat Detail</a></td>
+                                                        <td><?= $s['content']; ?></td>
+                                                        <td><?= $s['ts']; ?></td>
                                                     </tr>
                                                     <?php $i++; ?>
                                                 <?php endforeach; ?>
