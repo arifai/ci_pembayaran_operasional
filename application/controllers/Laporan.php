@@ -37,6 +37,12 @@ class Laporan extends CI_Controller
 				$url_cetak = 'laporan/print?filter=3&tahun=' . $tahun;
 				$report = $this->report->byYear($tahun); // Panggil fungsi byYear yang ada di report
 			}
+		} else if (isset($_GET['search']) && !empty($_GET['search'])) {
+			$absen = $_GET['search'];
+
+			// $ket = 'Data Transaksi Berdasarkan No. Absen ' . $absen;
+			$url_cetak = 'laporan/print?search=' . $absen;
+			$report = $this->report->byAbsen($absen);
 		} else { // Jika user tidak mengklik tombol tampilkan
 			$ket = 'Semua Data Transaksi';
 			$url_cetak = 'laporan/print';
@@ -79,6 +85,11 @@ class Laporan extends CI_Controller
 				$ket = 'Data Transaksi Tahun ' . $tahun;
 				$report = $this->report->byYear($tahun); // Panggil fungsi byYear yang ada di report
 			}
+		} else if (isset($_GET['search']) && !empty($_GET['search'])) {
+			$absen = $_GET['search'];
+
+			$ket = 'Data Transaksi Berdasarkan No. Absen: ' . $absen;
+			$report = $this->report->byAbsen($absen);
 		} else { // Jika user tidak mengklik tombol tampilkan
 			$ket = 'Semua Data Transaksi';
 			$report = $this->report->showAll(); // Panggil fungsi showAll yang ada di report

@@ -1,8 +1,35 @@
 <?php $this->load->view('partials/_header.php') ?>
 
+<style>
+    footer {
+        clear: both;
+        position: relative;
+        margin-top: 50px;
+        color: grey;
+    }
+
+    .name {
+        margin-top: 35px;
+        /* color: grey; */
+    }
+
+    .right {
+        margin-top: 20px;
+        float: right;
+        text-align: center;
+        padding: 10px;
+        margin-left: 75%;
+    }
+</style>
+
 <body>
-    <h3 class="text-center">Laporan Pembayaran</h3>
-    <h4 class="text-center"><?= $ket; ?></h4>
+    <center>
+        <h3 class="font-weight-bold">Pondok Pesantren Miftahul Huda</h3>
+        <h4>Siwatu, Bumiroso, Watumalang, Wonosobo</h4>
+        <hr>
+        <p class="font-weight-bold">Laporan Pembayaran</p>
+        <p><?= $ket; ?></p>
+    </center>
 
     <div class="table-responsive pt-3">
         <table class="table table-striped">
@@ -10,10 +37,11 @@
                 <tr>
                     <th>No.</th>
                     <th>Nama</th>
-                    <th>Nama Pembayaran</th>
-                    <th>Status Pembayaran</th>
+                    <th>Kelas</th>
+                    <th>Pembayaran</th>
+                    <th>Status</th>
                     <th>Tanggal</th>
-                    <th>Tarif Pembayaran</th>
+                    <th>Tarif</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +53,7 @@
                         echo "<tr>";
                         echo "<td>" . $no . "</td>";
                         echo "<td>" . $data['full_name'] . "</td>";
+                        echo "<td>" . $data['class'] . "</td>";
                         echo "<td>" . $data['payment_name'] . "</td>";
                         echo "<td>" . $data['payment_status'] . "</td>";
                         echo "<td>" . date('d-m-Y', strtotime($data['ts'])) . "</td>";
@@ -35,16 +64,28 @@
                         // break;
                     }
                     echo '<tr>';
-                    echo '<td colspan="5" class="font-weight-bold text-center">Total</td>';
+                    echo '<td colspan="6" class="font-weight-bold text-center">Total</td>';
                     echo '<td>' . rupiah($total) . '</td>';
                     echo '</tr>';
                 }
                 ?>
             </tbody>
-        </table>
+        </table> <br>
         <?php
         date_default_timezone_set('Asia/Jakarta');
-        echo '<p>Dicetak pada tanggal: ' . date('d-m-Y H:i:s') . '</p>';
+        echo '<p style="color: grey">Dicetak pada tanggal: ' . date('d-m-Y H:i:s') . '</p>';
         ?>
     </div>
+    <div class="right">
+        <p>TTD</p>
+        <p>BENDAHARA</p>
+        <p class="name">(.............................................)</p>
+    </div>
+
+    <footer>
+        <hr>
+        <center>
+            <p>Untuk melihat informasi pembayaran silahkan buka website <a href="https://syahriahppmh.com">www.syahriahppmh.com</a></p>
+        </center>
+    </footer>
 </body>

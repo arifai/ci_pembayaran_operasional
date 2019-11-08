@@ -66,18 +66,22 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <p class="card-title">Pembayaran</p> <br>
                                         <div>
-                                            <!-- <button data-toggle="modal" class="btn btn-primary btn-icon-text btn-sm">
-                                                <i class="ti-save btn-icon-prepend"></i>
-                                                Simpan
-                                            </button> -->
                                             <a href="<?= $url_cetak; ?>" class="btn btn-warning btn-icon-text btn-sm">
                                                 <i class="ti-printer btn-icon-prepend"></i>
                                                 Print
                                             </a>
                                         </div>
+                                    </div> <br>
+                                    <div class="d-flex justify-content-end">
+                                        <form class="form-inline">
+                                            <div class="input-group">
+                                                <input type="text" name="search" class="form-control form-control-sm mb-2 mr-sm-2" placeholder="Cari No. Absen">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mb-2 btn-sm">Cari</button>
+                                        </form>
                                     </div>
                                     <div class="table-responsive pt-3">
-                                        <table class="table table-bordered" id="myTable">
+                                        <table class="table table-bordered" id="myLaporan">
                                             <thead align="center">
                                                 <tr>
                                                     <th>No.</th>

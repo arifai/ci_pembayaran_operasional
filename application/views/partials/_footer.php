@@ -17,8 +17,17 @@
   <script type="text/javascript">
     // datatables
     $(document).ready(function() {
+      $('#myLaporan').DataTable({
+        searching: false,
+      });
+
       $('#myTable').DataTable();
+
+      // $("#myTable_filter input").prop('id', "search");
+      // $("#myTable_filter input").prop('name', "search");
     });
+
+
 
     $(document).ready(function() { // Ketika halaman selesai di load
       var currentDate = new Date();
