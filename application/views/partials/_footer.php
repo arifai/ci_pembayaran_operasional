@@ -6,7 +6,7 @@
   <script type="text/javascript" src="<?= base_url('assets/'); ?>js/jquery.js"></script>
   <script type="text/javascript" src="<?= base_url('assets/'); ?>js/jquery.min.js"></script>
   <!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
-  <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
   <script type="text/javascript" src="<?= base_url('assets/'); ?>js/hoverable-collapse.js"></script>
   <script type="text/javascript" src="<?= base_url('assets/'); ?>js/template.js"></script>
   <script type="text/javascript" src="<?= base_url('assets/'); ?>js/todolist.js"></script>

@@ -20,7 +20,7 @@ class Report_model extends CI_Model
         $this->db->join('status_pembayaran', 'pembayaran.payment_status_id = status_pembayaran.id', 'left');
         $this->db->join('jenis_pembayaran', 'pembayaran.payment_name_id = jenis_pembayaran.id', 'left');
         $this->db->where('DATE(pembayaran.ts)', $date);
-        $this->db->order_by('pembayaran.full_name', 'ASC');
+        $this->db->order_by('pembayaran.no_absen', 'ASC');
         $query = $this->db->get();
         if ($query->num_rows() != 0) {
             return $query->result_array();
@@ -37,7 +37,7 @@ class Report_model extends CI_Model
         $this->db->join('jenis_pembayaran', 'pembayaran.payment_name_id = jenis_pembayaran.id', 'left');
         $this->db->where('MONTH(pembayaran.ts)', $month);
         $this->db->where('YEAR(pembayaran.ts)', $year);
-        $this->db->order_by('pembayaran.full_name', 'ASC');
+        $this->db->order_by('pembayaran.no_absen', 'ASC');
         $query = $this->db->get();
         if ($query->num_rows() != 0) {
             return $query->result_array();
@@ -53,7 +53,7 @@ class Report_model extends CI_Model
         $this->db->join('status_pembayaran', 'pembayaran.payment_status_id = status_pembayaran.id', 'left');
         $this->db->join('jenis_pembayaran', 'pembayaran.payment_name_id = jenis_pembayaran.id', 'left');
         $this->db->where('YEAR(pembayaran.ts)', $year);
-        $this->db->order_by('pembayaran.full_name', 'ASC');
+        $this->db->order_by('pembayaran.no_absen', 'ASC');
         $query = $this->db->get();
         if ($query->num_rows() != 0) {
             return $query->result_array();

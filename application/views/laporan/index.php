@@ -66,6 +66,9 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <p class="card-title">Pembayaran</p> <br>
                                         <div>
+                                            <a href="<?= $url_export; ?>" class="btn btn-success btn-icon-text btn-sm">
+                                                Excel
+                                            </a>
                                             <a href="<?= $url_cetak; ?>" class="btn btn-warning btn-icon-text btn-sm">
                                                 <i class="ti-printer btn-icon-prepend"></i>
                                                 Print
@@ -85,6 +88,7 @@
                                             <thead align="center">
                                                 <tr>
                                                     <th>No.</th>
+                                                    <th>No. Absen</th>
                                                     <th>Nama</th>
                                                     <th>Nama Pembayaran</th>
                                                     <th>Status Pembayaran</th>
@@ -99,6 +103,7 @@
                                                     foreach ($pembayaran as $s) {
                                                         echo '<tr>';
                                                         echo '<td>' . $i . '</td>';
+                                                        echo '<td>' . $s['no_absen'] . '</td>';
                                                         echo '<td>' . $s['full_name'] . '</td>';
                                                         echo '<td>' . $s['payment_name'] . '</td>';
                                                         if ($s['payment_status_id'] == 1) {
